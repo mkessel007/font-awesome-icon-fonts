@@ -6,7 +6,7 @@ add_filter( 'widget_text', 'do_shortcode' );
 
 function faif_setup_shortcode( $atts ) {
 	extract( shortcode_atts( array(
-		'name' => 'fa fa-icon-rocket',
+		'name' => 'fa-icon-rocket',
 		'size' => '',
 		'pull' => '',
 		'border' => '',
@@ -14,7 +14,7 @@ function faif_setup_shortcode( $atts ) {
 
 	), $atts ));
 
-	return '<i class="' . $name . ' ' . $size . ' ' . $pull . ' ' . $border . ' ' . $muted . '"></i>';
+	return '<i class="fa ' . $name . ' ' . $size . ' ' . $pull . ' ' . $border . ' ' . $muted . '"></i>';
 }
 
 add_shortcode( 'icon', 'faif_setup_shortcode' );
